@@ -34,7 +34,7 @@ controls.enableDamping = true;
 controls.update();
 
 //cam pos
-camera.position.set(0, 9,17); // x, y, z
+camera.position.set(0, 12,17); // x, y, z
 camera.lookAt(0, 0, 0);
 
 const dracoLoader = new DRACOLoader();
