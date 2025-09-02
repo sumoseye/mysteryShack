@@ -30,3 +30,232 @@
   }
 }
 
+#loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('/images/loadingpage.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 99999;
+
+  #welcome-text{
+    position: absolute; 
+    top: 20px; 
+    right: 100px; 
+    font-size: 10em;
+    color: rgb(0, 0, 0);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    margin: 0; 
+  }
+}
+
+#dialouge-box {
+  position: fixed;
+  bottom: 0; /* Stick to bottom */
+  height: 25vh;
+  width: 100vw; /* Full width */
+  background: rgba(255, 216, 89, 0.9);
+  
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+  z-index: 9999;
+  
+ 
+  
+}
+
+#mabe {
+  order: 2; /* Move image to right side */
+  right: -20px; /* Adjusted to bring the image closer */
+  position: relative; /* Added for top adjustment */
+  top: -60px; /* Move the image up */
+}
+
+#mabe img {
+  width: 325px; /* Reduced size proportionally */
+  height: 430px; /* Reduced size proportionally */
+  border-radius: 10px;
+}
+
+#dialouge {
+  order: 1; /* Text on left side */
+  color: rgb(0, 0, 0);
+  flex: 1;
+  padding-left: 50px; /* Added padding to bring text more to the right */
+}
+
+#dialouge h1 {
+  margin: 0 0 10px 0;
+  color: #000000;
+  font-size: 2.2rem; /* Slightly reduced size */
+}
+
+#dialouge p {
+  margin: 0;
+  opacity: 0.8;
+  font-size: 1.3rem; /* Slightly reduced size */
+}
+
+
+/* Gallery button */
+#gallery-btn {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  padding: 15px 25px;
+  background: #ff00ff;
+  color: black;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  z-index: 1000;
+  font-family: 'Courier New', monospace;
+}
+
+/* Modal background */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.95);
+  z-index: 10000;
+  overflow-y: auto; /* Enable scrolling */
+}
+
+/* Modal content */
+.modal-content {
+  background: #1a1a1a;
+  margin: 5% auto;
+  padding: 30px;
+  border: 3px solid #ff00ff;
+  border-radius: 15px;
+  width: 80%;
+  max-width: 1000px;
+  max-height: 80vh;
+  overflow-y: auto; /* Scrollable content */
+}
+
+/* Close button */
+.close {
+  color: #ff00ff;
+  float: right;
+  font-size: 35px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: #fff;
+}
+
+/* Gallery grid */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 2px solid #00ff88;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.05);
+  border-color: #ff00ff;
+}
+
+
+/* Gallery button */
+#gallery-btn {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  padding: 15px 25px;
+  background: #cfa832;
+  color: black;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  z-index: 1000;
+  font-family: 'Courier New', monospace;
+}
+
+/* Modal background */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.95);
+  z-index: 10000;
+  overflow-y: auto; /* Enable scrolling */
+}
+
+/* Modal content */
+.modal-content {
+  background: #1a1a1a;
+  margin: 5% auto;
+  padding: 30px;
+  border: 3px solid #ff00ff;
+  border-radius: 15px;
+  width: 80%;
+  max-width: 1000px;
+  max-height: 80vh;
+  overflow-y: auto; /* Scrollable content */
+}
+
+/* Close button */
+.close {
+  color: #ff00ff;
+  float: right;
+  font-size: 35px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: #fff;
+}
+
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 2px solid #00ff88;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.05);
+  border-color: #ff00ff;
+}
