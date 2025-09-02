@@ -111,14 +111,20 @@
   top: 20px;
   left: 20px;
   padding: 15px 25px;
-  background: #cfa832;
-  color: rgb(0, 0, 0);
+  background: #cfa832; 
+  color: white;
   border: none;
   border-radius: 8px;
   cursor: pointer;
   font-weight: bold;
   z-index: 1000;
   font-family: 'Montserrat', 'Verdana', sans-serif;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: #ffd966;
+    transform: translateY(-2px);
+  }
 }
 
 /* Modal background */
@@ -200,7 +206,7 @@
 //contact btn
 #socials-btn {
   position: fixed;
-  top: 200px; // Position below other buttons
+  top: 80px;
   left: 20px;
   padding: 15px 25px;
   background: #cfa832; 
@@ -226,7 +232,7 @@
   }
 
   h2 {
-    color: #cfa832;
+    color:white;
     margin-bottom: 20px;
   }
 }

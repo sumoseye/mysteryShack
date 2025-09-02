@@ -282,7 +282,7 @@ window.closeGallery = function() {
 
 // Socials modal functions
 // Socials modal functions
-function openSocials() {
+window.openSocials = function() {
   console.log("Opening socials modal...");
   const socialsModal = document.getElementById('socials-modal');
   if (socialsModal) {
@@ -291,7 +291,7 @@ function openSocials() {
   }
 }
 
-function closeSocials() {
+window.closeSocials = function() {
   console.log("Closing socials modal...");
   const socialsModal = document.getElementById('socials-modal');
   if (socialsModal) {
@@ -300,30 +300,8 @@ function closeSocials() {
   }
 }
 
-// Make functions global (important for HTML onclick)
-window.openSocials = openSocials;
-window.closeSocials = closeSocials;
 
-// Close modal when clicking outside or pressing Escape
-document.addEventListener('DOMContentLoaded', function() {
-  const socialsModal = document.getElementById('socials-modal');
-  
-  // Close when clicking outside modal content
-  if (socialsModal) {
-    socialsModal.addEventListener('click', function(event) {
-      if (event.target === socialsModal) {
-        closeSocials();
-      }
-    });
-  }
-  
-  // Close when pressing Escape key
-  document.addEventListener('keydown', function(event) {
-    if (event.key === 'Escape') {
-      closeSocials();
-    }
-  });
-});
+
 
 
 
