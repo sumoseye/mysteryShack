@@ -2,9 +2,9 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image/svg+xml" href="/images/monocle.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <title>MYSTERY SHACK</title>
   </head>
   <body>
     <div id="app"></div>
@@ -24,24 +24,46 @@
     </div>
 
 
-<!-- Button to open gallery -->
+
 <button id="gallery-btn" onclick="openGallery()"> Gallery</button>
 
-<!-- The modal -->
 <div id="gallery-modal" class="modal">
   <div class="modal-content">
+    <h2 id="text">Took about 5 days👍</h2>
     <span class="close" onclick="closeGallery()">&times;</span>
-    <h2>uwu</h2>
+    
     <div class="gallery-grid">
       <img src="images/image1.jpeg">
       <img src="images/img2.jpeg">
-      <img src="image/img3.jpeg">
       <img src="images/image4.jpeg">
+      <img src="images/backshot.png">
       <img src="images/5.jpeg">
+      <img src="images/bill.png">
      
     </div>
   </div>
 </div>
+
+<button id="socials-btn" onclick="openSocials()"> Socials</button>
+
+<!-- Socials Modal -->
+<div id="socials-modal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeSocials()">&times;</span>
+    <h2>My Socials</h2>
+    <div class="socials-grid">
+      <a href="https://discord.com/users/sumoseye" target="_blank" class="social-link">
+        <img src="/images/disc.png" alt="Discord">
+        <span>Discord</span>
+      </a>
+      <a href="https://github.com/sumoseye" target="_blank" class="social-link">
+        <img src="/images/hit.png" alt="GitHub">
+        <span>GitHub</span>
+      </a>
+    </div>
+  </div>
+</div>
+
 
 
     <div id="experience">

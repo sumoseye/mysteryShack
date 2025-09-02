@@ -255,18 +255,19 @@ scene.add(directionalLight);
 // ==================== GALLERY FUNCTIONS ====================
 // These must be OUTSIDE all other functions
 
-function openGallery() {
+
+
+
+window.openGallery = function() {
   console.log("Opening gallery...");
   const modal = document.getElementById("gallery-modal");
   if (modal) {
       modal.style.display = "block";
       document.body.style.overflow = "hidden";
-  } else {
-      console.error("Gallery modal not found!");
   }
 }
 
-function closeGallery() {
+window.closeGallery = function() {
   console.log("Closing gallery...");
   const modal = document.getElementById("gallery-modal");
   if (modal) {
@@ -275,32 +276,54 @@ function closeGallery() {
   }
 }
 
-// ==================== EVENT LISTENERS ====================
-// Add this at the VERY BOTTOM of your file (after all functions)
 
-// Wait for DOM to be fully loaded
-document.addEventListener('DOMContentLoaded', function() {
-  // Gallery button
-  const galleryButton = document.getElementById("gallery-button");
-  if (galleryButton) {
-      console.log("Gallery button found, adding listener...");
-      galleryButton.addEventListener("click", openGallery);
-  } else {
-      console.error("Gallery button not found! Check HTML ID.");
+
+
+
+// Socials modal functions
+// Socials modal functions
+function openSocials() {
+  console.log("Opening socials modal...");
+  const socialsModal = document.getElementById('socials-modal');
+  if (socialsModal) {
+    socialsModal.style.display = 'block';
+    document.body.style.overflow = 'hidden'; // Prevent scrolling
   }
+}
 
-  // Close modal on outside click
-  window.addEventListener('click', function(event) {
-      const modal = document.getElementById("gallery-modal");
-      if (event.target === modal) {
-          closeGallery();
+function closeSocials() {
+  console.log("Closing socials modal...");
+  const socialsModal = document.getElementById('socials-modal');
+  if (socialsModal) {
+    socialsModal.style.display = 'none';
+    document.body.style.overflow = 'auto'; // Re-enable scrolling
+  }
+}
+
+// Make functions global (important for HTML onclick)
+window.openSocials = openSocials;
+window.closeSocials = closeSocials;
+
+// Close modal when clicking outside or pressing Escape
+document.addEventListener('DOMContentLoaded', function() {
+  const socialsModal = document.getElementById('socials-modal');
+  
+  // Close when clicking outside modal content
+  if (socialsModal) {
+    socialsModal.addEventListener('click', function(event) {
+      if (event.target === socialsModal) {
+        closeSocials();
       }
-  });
-
-  // Close modal on Escape key
+    });
+  }
+  
+  // Close when pressing Escape key
   document.addEventListener('keydown', function(event) {
-      if (event.key === "Escape") {
-          closeGallery();
-      }
+    if (event.key === 'Escape') {
+      closeSocials();
+    }
   });
 });
+
+
+
